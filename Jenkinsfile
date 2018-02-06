@@ -6,7 +6,7 @@ env.DIRPATH=pwd()
 sh "echo ${env.DIRPATH}"
 env.BRANCH=env.BRANCH_NAME
 sh "echo ${env.BRANCH}"
-sh "cd ${env.DIRPATH}/example 
-mvn clean package"
+sh "cd ${env.DIRPATH}/example" 
+sh "mvn -B -f ${env.DIRPATH}/example/pom.xml clean package"
 }
 
