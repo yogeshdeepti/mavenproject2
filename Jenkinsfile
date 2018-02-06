@@ -4,7 +4,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/${BRANCH_NAME}']], doGenerateSu
 stage 'build'
 env.DIRPATH=pwd()
 sh "echo ${env.DIRPATH}"
-env.BRANCH=${env.BRANCH_NAME}
+env.BRANCH=env.BRANCH_NAME
 sh "echo ${env.BRANCH}"
 sh "cd ${env.DIRPATH}/example" 
 sh "mvn clean package"
