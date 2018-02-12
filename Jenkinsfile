@@ -5,7 +5,7 @@ stage 'build'
 env.DIRPATH=pwd()
 sh "echo ${env.DIRPATH}"
 env.BRANCH=env.BRANCH_NAME
-echo '$env.BRANCH_NAME== $env.BUILD_NUMBER == $env.BUILD_URL == $env.BUILD_TAG'
+  echo "${env.BRANCH_NAME}== ${env.BUILD_NUMBER} == ${env.BUILD_URL} == ${env.BUILD_TAG}"
 sh "echo ${env.BRANCH}"
 sh """cd ${env.DIRPATH}/example 
 mvn clean package"""
