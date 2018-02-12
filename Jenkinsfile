@@ -8,6 +8,7 @@ env.BRANCH=env.BRANCH_NAME
   echo "${env.BRANCH_NAME}== ${env.BUILD_NUMBER} == ${env.BUILD_URL} == ${env.BUILD_TAG}"
 sh "echo ${env.BRANCH}"
 sh """cd ${env.DIRPATH}/example 
-mvn clean package"""
+mvn clean package
+mvn deploy:deploy-file -Dfile=/var/lib/jenkins/workspace/testjobmbrppl_master-HKMF3KCMMHQRJSQHO3RY42Q6R3CZOPPXO4FPFHCUSNPOLZWDKCQA/example/target/github-maven-example-0.1-SNAPSHOT.jar -Dpackaging=jar -DrepositoryID=everything -D url=http://10.13.163.14:8080/plugin/repository/everything/"""
 }
 
