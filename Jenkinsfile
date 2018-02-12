@@ -9,6 +9,6 @@ env.BRANCH=env.BRANCH_NAME
 sh "echo ${env.BRANCH}"
 sh """cd ${env.DIRPATH}/example 
 mvn clean package
-mvn deploy:deploy-file -DgroupId=com.example.fo  -DartifactId=maven-example -Dversion=1.0 -Dfile=/var/lib/jenkins/workspace/testjobmbrppl_master-HKMF3KCMMHQRJSQHO3RY42Q6R3CZOPPXO4FPFHCUSNPOLZWDKCQA/example/target/github-maven-example-0.1-SNAPSHOT.jar -Dpackaging=jar -DrepositoryID=everything -D url=http://10.13.163.14:8080/plugin/repository/everything/"""
+mvn deploy:deploy-file -DgroupId=com.example.fo -DartifactId=maven-example -Dversion=1.0 -Dfile=/var/lib/jenkins/workspace/testjobmbrppl_master-HKMF3KCMMHQRJSQHO3RY42Q6R3CZOPPXO4FPFHCUSNPOLZWDKCQA/example/target/github-maven-example-0.1-SNAPSHOT.jar -Dpackaging=jar -DrepositoryID=everything -Durl=http://10.13.163.14:8080/plugin/repository/everything/"""
 }
 
